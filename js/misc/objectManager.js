@@ -238,22 +238,4 @@ export class ObjectManager extends Signals.EventEmitter {
 
         return proxyList;
     }
-
-    getAllProxies() {
-        const proxies = [];
-
-        const objectPaths = Object.keys(this._objects);
-        for (let i = 0; i < objectPaths.length; i++) {
-            const object = this._objects[objectPaths];
-
-            const interfaceNames = Object.keys(object);
-            for (let j = 0; j < interfaceNames.length; j++) {
-                const interfaceName = interfaceNames[j];
-                if (object[interfaceName])
-                    proxies.push(object(interfaceName));
-            }
-        }
-
-        return proxies;
-    }
 }
