@@ -2299,6 +2299,9 @@ export const FolderIcon = GObject.registerClass({
 
         this._folder.connectObject(
             'changed', this._sync.bind(this), this);
+        const appFavorites = AppFavorites.getAppFavorites();
+        appFavorites.connectObject(
+            'changed', this._sync.bind(this), this);
         this._sync();
     }
 
