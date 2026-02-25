@@ -340,6 +340,7 @@ do_grab_screenshot (ShellScreenshot     *screenshot,
                                       cairo_image_surface_get_data (image),
                                       cairo_image_surface_get_stride (image),
                                       COGL_PIXEL_FORMAT_CAIRO_ARGB32_COMPAT,
+                                      NULL,
                                       paint_flags,
                                       &error))
     {
@@ -492,6 +493,7 @@ grab_screenshot_content (ShellScreenshot *screenshot,
   screenshot->scale = scale;
 
   content = clutter_stage_paint_to_content (stage, &screenshot_rect, scale,
+                                            NULL,
                                             CLUTTER_PAINT_FLAG_NO_CURSORS,
                                             &error);
   if (!content)

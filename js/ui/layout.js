@@ -1408,7 +1408,7 @@ class ScreenTransition extends Clutter.Actor {
             height: global.screen_height,
         });
         const [, , , scale] = global.stage.get_capture_final_size(rect);
-        this.content = global.stage.paint_to_content(rect, scale, Clutter.PaintFlag.NO_CURSORS);
+        this.content = global.stage.paint_to_content(rect, scale, null, Clutter.PaintFlag.NO_CURSORS);
 
         this.opacity = 255;
         this.show();
