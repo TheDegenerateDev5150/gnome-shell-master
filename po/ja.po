@@ -11,7 +11,7 @@
 # Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
 # IWAI, Masaharu <iwaim.sub@gmail.com>, 2015.
 # sicklylife <translation@sicklylife.jp>, 2019-2020, 2022.
-# 小山田 純 <oyamadajun@outlook.jp>, 2022-2024.
+# 小山田 純 <oyamadajun@outlook.jp>, 2022-2025.
 # Makoto Sakaguchi <ycco34vx@gmail.com>, 2025.
 # Seiji Iizuka <seiji@iizuka.dev>, 2025-2026.
 #
@@ -19,16 +19,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
-"POT-Creation-Date: 2026-01-30 14:10+0000\n"
-"PO-Revision-Date: 2026-02-01 20:56+0900\n"
-"Last-Translator: Seiji Iizuka <seiji@iizuka.dev>\n"
+"POT-Creation-Date: 2026-02-24 15:04+0000\n"
+"PO-Revision-Date: 2026-02-28 12:56+0900\n"
+"Last-Translator: 小山田 純 <oyamadajun@outlook.jp>\n"
 "Language-Team: Japanese <https://l10n.gnome.org/teams/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/50-gnome-shell-launchers.xml:6
 msgid "Launchers"
@@ -612,12 +612,12 @@ msgstr "スクリーンタイムのリミットとなりました"
 #: js/gdm/authPrompt.js:64
 msgid ""
 "Daily limit for screen time on this device has been reached. Resume tomorrow."
-msgstr ""
+msgstr "本日のスクリーンタイムの制限時間が来ました。続きは明日にしましょう。"
 
 #. Translators: this is for ignoring a screen time limit for parental controls
 #: js/gdm/authPrompt.js:72
 msgid "Ignore"
-msgstr ""
+msgstr "無視"
 
 #: js/gdm/authPrompt.js:256 js/gdm/loginDialog.js:514
 #: js/ui/audioDeviceSelection.js:60 js/ui/components/networkAgent.js:114
@@ -710,42 +710,42 @@ msgstr "アカウントが見つかりませんか?"
 
 #. Translators: this message is shown below the username entry field
 #. to clue the user in on how to login to the local network realm
-#: js/gdm/loginDialog.js:1129
+#: js/gdm/loginDialog.js:1136
 #, javascript-format
 msgid "(e.g., user or %s)"
 msgstr "(たとえば、user あるいは %s)"
 
-#: js/gdm/loginDialog.js:1134 js/ui/components/networkAgent.js:258
+#: js/gdm/loginDialog.js:1141 js/ui/components/networkAgent.js:258
 #: js/ui/components/networkAgent.js:293 js/ui/components/networkAgent.js:327
 #: subprojects/extensions-tool/src/command-upload.c:234
 msgid "Username"
 msgstr "ユーザー名"
 
-#: js/gdm/loginDialog.js:1200
+#: js/gdm/loginDialog.js:1207
 msgid "Login Attempt Timed Out"
 msgstr "ログイン試行がタイムアウトしました"
 
-#: js/gdm/loginDialog.js:1201
+#: js/gdm/loginDialog.js:1208
 msgid "Login took too long, please try again"
 msgstr "ログインに時間がかかりすぎました。再度試してください"
 
-#: js/gdm/loginDialog.js:1546
+#: js/gdm/loginDialog.js:1553
 msgid "Login Window"
 msgstr "ログインウィンドウ"
 
-#: js/gdm/util.js:499
+#: js/gdm/util.js:496
 msgid "Authentication error"
 msgstr "認証エラー"
 
 #. Translators: this message is shown below the password entry field
 #. to indicate the user can swipe their finger on the fingerprint reader
-#: js/gdm/util.js:730
+#: js/gdm/util.js:731
 msgid "(or swipe finger across reader)"
 msgstr "(または指紋リーダーで指をスワイプ)"
 
 #. Translators: this message is shown below the password entry field
 #. to indicate the user can place their finger on the fingerprint reader instead
-#: js/gdm/util.js:735
+#: js/gdm/util.js:736
 msgid "(or place finger on reader)"
 msgstr "(または指紋リーダーに指を置く)"
 
@@ -1022,7 +1022,7 @@ msgstr "スクリーンタイムのリミットまであとわずかです"
 #, javascript-format
 msgid "The computer will lock in %d second."
 msgid_plural "The computer will lock in %d seconds."
-msgstr[0] "%d 秒後にコンピューターをロックします"
+msgstr[0] "%d 秒後にコンピューターをロックします。"
 
 #: js/misc/timeLimitsManager.js:1402
 #, javascript-format
@@ -1189,7 +1189,7 @@ msgstr "拒否"
 msgid "Allow"
 msgstr "許可"
 
-#: js/ui/appDisplay.js:1731
+#: js/ui/appDisplay.js:1732
 msgid "Unnamed Folder"
 msgstr "名前のないフォルダー"
 
@@ -1256,7 +1256,7 @@ msgstr "ヘッドフォン"
 msgid "Headset"
 msgstr "ヘッドセット"
 
-#: js/ui/audioDeviceSelection.js:79 js/ui/status/volume.js:366
+#: js/ui/audioDeviceSelection.js:79 js/ui/status/volume.js:371
 msgid "Microphone"
 msgstr "マイク"
 
@@ -1932,11 +1932,11 @@ msgstr ""
 "セキュリティ上の理由により、特権ユーザーとしてのセッション実行は避けるべきで"
 "す。可能であれば、一般ユーザーとしてログインしてください。"
 
-#: js/ui/main.js:409
+#: js/ui/main.js:411
 msgid "Screen Lock disabled"
 msgstr "画面ロックが無効です"
 
-#: js/ui/main.js:410
+#: js/ui/main.js:412
 msgid "Screen Locking requires the GNOME display manager"
 msgstr "画面ロックには GNOME ディスプレイマネージャーが必要です"
 
@@ -2175,15 +2175,15 @@ msgstr "クリップボードから画像を貼り付けできます"
 msgid "Screenshot taken"
 msgstr "スクリーンショットを撮影しました"
 
-#: js/ui/search.js:846
+#: js/ui/search.js:850
 msgid "Searching"
 msgstr "検索中"
 
-#: js/ui/search.js:849
+#: js/ui/search.js:853
 msgid "No results"
 msgstr "一致するものがありません"
 
-#: js/ui/search.js:984
+#: js/ui/search.js:989
 #, javascript-format
 msgid "%d more"
 msgid_plural "%d more"
@@ -2699,23 +2699,23 @@ msgstr "ミュート解除"
 msgid "Mute"
 msgstr "ミュート"
 
-#: js/ui/status/volume.js:292
+#: js/ui/status/volume.js:297
 msgid "Volume"
 msgstr "音量"
 
-#: js/ui/status/volume.js:308
+#: js/ui/status/volume.js:313
 msgid "Sound Output"
 msgstr "音声出力"
 
-#: js/ui/status/volume.js:309
+#: js/ui/status/volume.js:314
 msgid "Open sound output menu"
 msgstr "音声出力メニューを開く"
 
-#: js/ui/status/volume.js:384
+#: js/ui/status/volume.js:389
 msgid "Sound Input"
 msgstr "音声入力"
 
-#: js/ui/status/volume.js:385
+#: js/ui/status/volume.js:390
 msgid "Open sound input menu"
 msgstr "音声入力メニューを開く"
 
@@ -2888,23 +2888,23 @@ msgstr "右側のモニターへ移動する"
 msgid "Close"
 msgstr "閉じる"
 
-#: src/main.c:513 subprojects/extensions-tool/src/main.c:336
+#: src/main.c:515 subprojects/extensions-tool/src/main.c:336
 msgid "Print version"
 msgstr "バージョンを表示する"
 
-#: src/main.c:519
+#: src/main.c:521
 msgid "Mode used by GDM for login screen"
 msgstr "ログイン画面で GDM が使用するモード"
 
-#: src/main.c:525
+#: src/main.c:527
 msgid "Use a specific mode, e.g. “gdm” for login screen"
 msgstr "指定したモードを使用する (例: ログイン画面用の“gdm”)"
 
-#: src/main.c:531
+#: src/main.c:533
 msgid "List possible modes"
 msgstr "使用可能なモードを一覧表示"
 
-#: src/main.c:537
+#: src/main.c:539
 msgid "Force animations to be enabled"
 msgstr "アニメーションを強制的に有効にする"
 
@@ -2956,15 +2956,15 @@ msgstr ""
 "“拡張機能”は GNOME Shell 拡張機能の設定、更新、削除、不要な拡張機能の無効化を"
 "行うことができます。"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:64
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:65
 msgid "Main Window"
 msgstr "メインウィンドウ"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:68
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:69
 msgid "Available Updates"
 msgstr "アップデートがあります"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:72
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:73
 msgid "Search View"
 msgstr "検索画面"
 
