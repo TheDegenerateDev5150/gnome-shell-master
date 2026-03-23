@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
-"POT-Creation-Date: 2026-03-15 11:01+0000\n"
-"PO-Revision-Date: 2026-03-17 21:52+0000\n"
+"POT-Creation-Date: 2026-03-20 01:51+0000\n"
+"PO-Revision-Date: 2026-03-23 13:17+0000\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/50-gnome-shell-launchers.xml:6
 msgid "Launchers"
@@ -2786,7 +2786,7 @@ msgstr "Skubya war-vann rag dialhwedha"
 
 #: js/ui/unlockDialog.js:422
 msgid "Click or press a key to unlock"
-msgstr "Klyckya po tava unn alhwedhen rag dialhwedha"
+msgstr "Klyckya po tava neb alhwedhen rag dialhwedha"
 
 #: js/ui/unlockDialog.js:610
 msgid "Unlock Window"
@@ -2946,11 +2946,11 @@ msgstr "Ankoth"
 msgid "Failed to launch “%s”"
 msgstr "Fyllis lonchya “%s”"
 
-#: src/shell-keyring-prompt.c:779
+#: src/shell-keyring-prompt.c:776
 msgid "Passwords do not match"
 msgstr "Geryow-tremena na omdhesedha"
 
-#: src/shell-keyring-prompt.c:787
+#: src/shell-keyring-prompt.c:784
 msgid "Password cannot be blank"
 msgstr "Ger-tremena na gwag a res"
 
