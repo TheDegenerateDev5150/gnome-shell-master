@@ -41,7 +41,6 @@ build_container() {
   )
   buildah run $build_cntr dnf config-manager setopt '*-openh264.enabled=0'
   buildah run $build_cntr dnf install -y "${extra_packages[@]}"
-  buildah run $build_cntr dnf builddep malcontent -y # for building libmalcontent
   buildah run $build_cntr dnf debuginfo-install -y "${debug_packages[@]}"
   buildah run $build_cntr dnf clean all
   buildah run $build_cntr rm -rf /var/lib/cache/dnf
@@ -58,11 +57,6 @@ build_container() {
 
   local srcdir=$(realpath $(dirname $0))
   buildah copy --chmod 755 $build_cntr $srcdir/install-meson-project.sh /usr/libexec
-
-  # add latest malcontent to the toolbox image for testing future integration
-  buildah run $build_cntr /usr/libexec/install-meson-project.sh https://gitlab.freedesktop.org/pwithnall/malcontent.git main -Dlibgsystemservice:gtk_doc=false
-  # somehow installing with buildah breaks the execute bit in malcontent-client
-  buildah run $build_cntr chmod 755 /usr/bin/malcontent-client
 
   # include convenience script for updating mutter dependency
   local update_mutter=$(mktemp)
