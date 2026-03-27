@@ -5,23 +5,23 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2009.
 # Wojciech Szczęsny <wszczesny@aviary.pl>, 2013.
 # Aviary.pl <community-poland@mozilla.org>, 2009-2025.
-# Victoria <royal.victoria@proton.me>, 2026.
+# Victoria Niedzielska <victorian@gnome.org>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
 "POT-Creation-Date: 2026-02-24 15:04+0000\n"
-"PO-Revision-Date: 2026-03-08 10:42+0100\n"
-"Last-Translator: Victoria <royal.victoria@proton.me>\n"
-"Language-Team: Polish\n"
+"PO-Revision-Date: 2026-03-27 09:46+0100\n"
+"Last-Translator: Victoria Niedzielska <victorian@gnome.org>\n"
+"Language-Team: Polish <https://l10n.gnome.org/teams/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/50-gnome-shell-launchers.xml:6
 msgid "Launchers"
@@ -201,15 +201,15 @@ msgstr ""
 
 #: data/org.gnome.shell.gschema.xml.in:37
 msgid "Disable user extensions"
-msgstr "Wyłączenie rozszerzeń osoby używającej"
+msgstr "Wyłączenie rozszerzeń osoby"
 
 #: data/org.gnome.shell.gschema.xml.in:38
 msgid ""
 "Disable all extensions the user has enabled without affecting the “enabled-"
 "extension” setting."
 msgstr ""
-"Wyłączenie wszystkich rozszerzeń włączonych przez osobę używającą bez "
-"zmiany ustawienia „enabled-extension”."
+"Wyłączenie wszystkich rozszerzeń włączonych przez osobę bez zmiany "
+"ustawienia „enabled-extension”."
 
 #: data/org.gnome.shell.gschema.xml.in:45
 msgid "Allow extension installation"
@@ -223,7 +223,7 @@ msgid ""
 "that are already loaded, so a change only takes full effect on the next "
 "login."
 msgstr ""
-"Zezwolenie osobom używającącym na instalowanie rozszerzeń w katalogu "
+"Zezwolenie osobom na instalowanie rozszerzeń w katalogu "
 "domowym. Po wyłączeniu metoda „InstallRemoteExtension” magistrali D-Bus się "
 "nie powiedzie, a rozszerzenia będą wczytywane tylko z katalogów systemowych "
 "podczas uruchamiania. Nie wpływa to na już wczytane rozszerzenia, więc "
@@ -276,8 +276,8 @@ msgid ""
 "system user and only a single available session type (e.g. GNOME on Wayland)."
 msgstr ""
 "Ten klucz zastępuje automatyczne ukrywanie działania „Wyloguj się” w menu "
-"systemowym w sytuacjach, gdy po zalogowaniu jest tylko jeden lokalny, "
-"niesystemowa osoba używająca i tylko jeden dostępny typ sesji (np. GNOME na "
+"systemowym w sytuacjach, gdy po zalogowaniu jest tylko jedna lokalna, "
+"niesystemowa osoba i tylko jeden dostępny typ sesji (np. GNOME na "
 "Wayland)."
 
 #: data/org.gnome.shell.gschema.xml.in:94
@@ -655,7 +655,7 @@ msgid ""
 "%s. To login remotely, you must log out from the remote session or force "
 "stop it."
 msgstr ""
-"Zdalne logowanie jest niemożliwe, ponieważ dla osoby używającej %s jest już "
+"Zdalne logowanie jest niemożliwe, ponieważ dla osoby %s jest już "
 "uruchomiona zdalna sesja. Aby zalogować się zdalnie, należy wylogować się ze "
 "zdalnej sesji lub wymusić jej zatrzymanie."
 
@@ -666,7 +666,7 @@ msgid ""
 "Login is not possible because a remote session is already running for %s. To "
 "login, you must log out from the remote session or force stop it."
 msgstr ""
-"Zalogowanie się jest niemożliwe, ponieważ dla osoby używającej %s jest już "
+"Zalogowanie się jest niemożliwe, ponieważ dla osoby %s jest już "
 "uruchomiona zdalna sesja. Aby się zalogować, należy wylogować się ze zdalnej "
 "sesji lub wymusić jej zatrzymanie."
 
@@ -678,7 +678,7 @@ msgid ""
 "%s. To login remotely, you must log out from the local session or force stop "
 "it."
 msgstr ""
-"Zdalne logowanie jest niemożliwe, ponieważ dla osoby używającej %s jest już "
+"Zdalne logowanie jest niemożliwe, ponieważ dla osoby %s jest już "
 "uruchomiona lokalna sesja. Aby zalogować się zdalnie, należy wylogować się "
 "z lokalnej sesji lub wymusić jej zatrzymanie."
 
@@ -689,7 +689,7 @@ msgid ""
 "Login is not possible because a session is already running for %s. To login, "
 "you must log out from the session or force stop it."
 msgstr ""
-"Zalogowanie się jest niemożliwe, ponieważ dla osoby używającej %s jest już "
+"Zalogowanie się jest niemożliwe, ponieważ dla osoby %s jest już "
 "uruchomiona sesja. Aby się zalogować, należy wylogować się z sesji lub "
 "wymusić jej zatrzymanie."
 
@@ -718,13 +718,13 @@ msgstr "Nie ma na liście?"
 #: js/gdm/loginDialog.js:1136
 #, javascript-format
 msgid "(e.g., user or %s)"
-msgstr "(np. osoba używająca lub %s)"
+msgstr "(np. osoba lub %s)"
 
 #: js/gdm/loginDialog.js:1141 js/ui/components/networkAgent.js:258
 #: js/ui/components/networkAgent.js:293 js/ui/components/networkAgent.js:327
 #: subprojects/extensions-tool/src/command-upload.c:234
 msgid "Username"
-msgstr "Nazwa osoby używającej"
+msgstr "Nazwa osoby"
 
 #: js/gdm/loginDialog.js:1207
 msgid "Login Attempt Timed Out"
@@ -1014,14 +1014,13 @@ msgstr "uśpij;uśpienie;wstrzymaj;wstrzymanie;suspend;sleep"
 #: js/misc/systemActions.js:134
 msgctxt "search-result"
 msgid "Switch User"
-msgstr "Przełącz osobę używającą"
+msgstr "Przełącz osobę"
 
 #. Translators: A list of keywords that match the switch user action, separated by semicolons
 #: js/misc/systemActions.js:137
 msgid "switch user"
 msgstr ""
-"przełącz użytkownika;przełączanie użytkowników;switch user;przełącz osobę "
-"używającą;przełącz osoby używające;"
+"przełącz użytkownika;przełączanie użytkowników;switch user;przełącz osobę;przełącz osoby;"
 
 #. Translators: A list of keywords that match the lock orientation action, separated by semicolons
 #: js/misc/systemActions.js:144
@@ -1570,7 +1569,7 @@ msgstr "Wymagane jest uwierzytelnienie"
 
 #: js/ui/components/polkitAgent.js:84
 msgid "Administrator"
-msgstr "Osoba administracyjna"
+msgstr "Osoba administrująca"
 
 #: js/ui/components/polkitAgent.js:149
 msgid "Authenticate"
@@ -1686,7 +1685,7 @@ msgstr "Wybierz położenie pogody…"
 #, javascript-format
 msgctxt "title"
 msgid "Log Out %s"
-msgstr "Wylogowanie osoby używającej %s"
+msgstr "Wylogowanie osoby %s"
 
 #: js/ui/endSessionDialog.js:47
 msgctxt "title"
@@ -1697,9 +1696,9 @@ msgstr "Wylogowanie"
 #, javascript-format
 msgid "%s will be logged out automatically in %d second"
 msgid_plural "%s will be logged out automatically in %d seconds"
-msgstr[0] "Osoba używająca %s zostanie wylogowana za %d sekundę"
-msgstr[1] "Osoba używająca %s zostanie wylogowana za %d sekundy"
-msgstr[2] "Osoba używająca %s zostanie wylogowana za %d sekund"
+msgstr[0] "Osoba %s zostanie wylogowana za %d sekundę"
+msgstr[1] "Osoba %s zostanie wylogowana za %d sekundy"
+msgstr[2] "Osoba %s zostanie wylogowana za %d sekund"
 
 #: js/ui/endSessionDialog.js:56
 #, javascript-format
@@ -1811,7 +1810,7 @@ msgstr "Niektóre programy są używane lub mają niezapisane dane"
 
 #: js/ui/endSessionDialog.js:276
 msgid "Other users are logged in"
-msgstr "Inne osoby używające są zalogowane"
+msgstr "Inne osoby są zalogowane"
 
 #: js/ui/endSessionDialog.js:431
 msgctxt "button"
@@ -1998,16 +1997,15 @@ msgstr "Programy mają teraz nieograniczony dostęp"
 
 #: js/ui/main.js:362
 msgid "Logged in as a privileged user"
-msgstr "Zalogowano jako uprawniona osoba używająca"
+msgstr "Zalogowano jako uprawniona osoba"
 
 #: js/ui/main.js:363
 msgid ""
 "Running a session as a privileged user should be avoided for security "
 "reasons. If possible, you should log in as a normal user."
 msgstr ""
-"Należy unikać działania jako uprawniona osoba używająca z powodów "
-"bezpieczeństwa. Jeśli to możliwe, należy zalogować się jako zwykła osoba "
-"używająca."
+"Należy unikać działania jako uprawniona osoba z powodów bezpieczeństwa. "
+"Jeśli to możliwe, należy zalogować się jako zwykłą osobę."
 
 #: js/ui/main.js:411
 msgid "Screen Lock disabled"
@@ -2527,7 +2525,7 @@ msgstr "Zezwolenie na dostęp do położenia"
 #: js/ui/status/location.js:339
 #, javascript-format
 msgid "The app %s wants to access your location"
-msgstr "Program „%s” prosi o dostęp do położenia osoby używającej"
+msgstr "Program „%s” prosi o dostęp do Twojego położenia"
 
 #: js/ui/status/location.js:349
 msgid "Location access can be changed at any time from the privacy settings"
@@ -2733,7 +2731,7 @@ msgstr "Wyloguj się…"
 
 #: js/ui/status/system.js:205
 msgid "Switch User…"
-msgstr "Przełącz osobę używającą…"
+msgstr "Przełącz osobę…"
 
 #: js/ui/status/system.js:249
 msgctxt "action"
@@ -2761,7 +2759,7 @@ msgid ""
 "New device has been detected and needs to be authorized by an administrator"
 msgstr ""
 "Wykryto nowe urządzenie, które musi zostać upoważnione przez osobę "
-"administracyjną"
+"administrującą"
 
 #: js/ui/status/thunderbolt.js:321
 msgid "Thunderbolt authorization error"
@@ -2852,7 +2850,7 @@ msgstr "Okno odblokowania"
 
 #: js/ui/unlockDialog.js:619
 msgid "Log in as another user"
-msgstr "Zaloguj jako inna osoba używająca"
+msgstr "Zaloguj jako inna osoba"
 
 #: js/ui/welcomeDialog.js:47
 #, javascript-format
@@ -3016,7 +3014,7 @@ msgstr "Hasło nie może być puste"
 
 #: src/shell-polkit-authentication-agent.c:342
 msgid "Authentication dialog was dismissed by the user"
-msgstr "Okno uwierzytelniania zostało odrzucone przez osobę używającą"
+msgstr "Okno uwierzytelniania zostało odrzucone przez osobę"
 
 #: src/st/st-icon-theme.c:1857
 #, c-format
@@ -3124,7 +3122,8 @@ msgstr ""
 "Piotr Drąg <piotrdrag@gmail.com>, 2009-2025\n"
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2009\n"
 "Wojciech Szczęsny <wszczesny@aviary.pl>, 2013\n"
-"Aviary.pl <community-poland@mozilla.org>, 2009-2025"
+"Aviary.pl <community-poland@mozilla.org>, 2009-2025\n"
+"Victoria Niedzielska <victorian@gnome.org>, 2026"
 
 #: subprojects/extensions-app/js/extensionsWindow.js:198
 #, javascript-format
@@ -3200,7 +3199,7 @@ msgstr ""
 
 #: subprojects/extensions-app/data/ui/extensions-window.ui:175
 msgid "User Extensions"
-msgstr "Rozszerzenia osoby używającej"
+msgstr "Rozszerzenia osoby"
 
 #: subprojects/extensions-app/data/ui/extensions-window.ui:184
 msgid "System Extensions"
@@ -3330,7 +3329,7 @@ msgstr "NAZWA"
 
 #: subprojects/extensions-tool/src/command-create.c:519
 msgid "The user-visible name of the new extension"
-msgstr "Widoczna dla osoby używającej nazwa nowego rozszerzenia"
+msgstr "Widoczna dla innych nazwa nowego rozszerzenia"
 
 #: subprojects/extensions-tool/src/command-create.c:521
 msgid "DESCRIPTION"
@@ -3462,7 +3461,7 @@ msgstr "Podano więcej niż jeden pakiet rozszerzenia"
 
 #: subprojects/extensions-tool/src/command-list.c:140
 msgid "Show user-installed extensions"
-msgstr "Wyświetla rozszerzenia zainstalowane przez osobę używającą"
+msgstr "Wyświetla rozszerzenia zainstalowane przez osobę"
 
 #: subprojects/extensions-tool/src/command-list.c:143
 msgid "Show system-installed extensions"
@@ -3590,12 +3589,12 @@ msgstr "Ostrzeżenie! Hasło zostanie wyświetlone na ekranie"
 
 #: subprojects/extensions-tool/src/command-upload.c:419
 msgid "USERNAME"
-msgstr "NAZWA-OSOBY-UŻYWAJĄCEJ"
+msgstr "NAZWA-OSOBY"
 
 #: subprojects/extensions-tool/src/command-upload.c:421
 msgid "Username to log into https://extensions.gnome.org"
 msgstr ""
-"Nazwa osoby używającej do logowania w serwisie https://extensions.gnome.org"
+"Nazwa osoby do logowania w serwisie https://extensions.gnome.org"
 
 #: subprojects/extensions-tool/src/command-upload.c:423
 msgid "PASSWORD"
