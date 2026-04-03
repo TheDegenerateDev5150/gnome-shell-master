@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
 "POT-Creation-Date: 2026-01-26 17:18+0000\n"
-"PO-Revision-Date: 2026-01-26 22:19+0100\n"
+"PO-Revision-Date: 2026-04-03 22:19+0100\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -199,7 +199,7 @@ msgstr ""
 "una llista de les extensions que s'han d'inhabilitar, fins i tot si es "
 "carreguen com a part del mode actual.Podeu modificar aquesta llista amb els "
 "mètodes de D-Bus «EnableExtension» (activa una extensió) i "
-"«DisableExtension» (desactiva una extensió) a org.gnome.Shell.Aquesta clau "
+"«DisableExtension» (desactiva una extensió) a org.gnome.Shell. Aquesta clau "
 "té preferència sobre el paràmetre «enabled-extensions»."
 
 #: data/org.gnome.shell.gschema.xml.in:37
@@ -765,7 +765,7 @@ msgstr "(o llisca el dit a través del lector)"
 #. to indicate the user can place their finger on the fingerprint reader instead
 #: js/gdm/util.js:734
 msgid "(or place finger on reader)"
-msgstr "(o posa el dit al lector)"
+msgstr "(o poseu el dit al lector)"
 
 #: js/misc/breakManager.js:770
 msgid "Break complete sound"
