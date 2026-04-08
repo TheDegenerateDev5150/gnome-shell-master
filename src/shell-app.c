@@ -1324,7 +1324,7 @@ apply_discrete_gpu_env (GAppLaunchContext *context,
     }
 
   GVariant *gpu_list[] = { first_nondefault_discrete, first_discrete, first_nondefault };
-  
+
   for (i = 0; i < G_N_ELEMENTS (gpu_list); ++i)
     {
       GVariant *gpu = gpu_list[i];
@@ -1701,8 +1701,7 @@ shell_app_update_app_actions (ShellApp   *app,
       if (application_object_path == NULL || unique_bus_name == NULL)
         return;
 
-      g_clear_pointer (&app->running_state->unique_bus_name, g_free);
-      app->running_state->unique_bus_name = g_strdup (unique_bus_name);
+      g_set_str (&app->running_state->unique_bus_name, unique_bus_name);
       actions = g_dbus_action_group_get (app->running_state->session, unique_bus_name, application_object_path);
       gtk_action_muxer_insert (app->running_state->muxer, "app", G_ACTION_GROUP (actions));
       g_object_unref (actions);
