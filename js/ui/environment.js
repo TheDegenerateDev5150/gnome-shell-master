@@ -182,8 +182,10 @@ function _easeActor(actor, params) {
     }
 
     if (transition) {
-        transition.connectObject('stopped', (t, finished) => callback(finished),
-            sessionSignalHolder);
+        transition.connectObject('stopped', (t, finished) => {
+            transition.disconnectObject(sessionSignalHolder);
+            callback(finished);
+        }, sessionSignalHolder);
     } else {
         callback(true);
     }
@@ -271,8 +273,10 @@ function _easeAnimatableProperty(animatable, propName, target, params) {
             prepare();
     }
 
-    transition.connectObject('stopped',
-        (t, finished) => callback(finished), sessionSignalHolder);
+    transition.connectObject('stopped', (t, finished) => {
+        transition.disconnectObject(sessionSignalHolder);
+        callback(finished);
+    }, sessionSignalHolder);
     return promise;
 }
 
