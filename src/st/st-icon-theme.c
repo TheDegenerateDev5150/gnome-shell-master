@@ -4017,7 +4017,7 @@ load_symbolic_icon_thread (GTask        *task,
                            GCancellable *cancellable)
 {
   AsyncSymbolicData *data = task_data;
-  GError *error;
+  GError *error = NULL;
   GdkPixbuf *pixbuf;
 
   error = NULL;
