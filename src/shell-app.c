@@ -333,8 +333,7 @@ find_most_recent_transient_on_same_workspace (MetaDisplay *display,
    * returned from the sort_windows_by_stacking function)
    */
   transients_sorted = g_slist_reverse (transients_sorted);
-  g_slist_free (transients);
-  transients = NULL;
+  g_clear_slist (&transients, NULL);
 
   result = NULL;
   for (iter = transients_sorted; iter; iter = iter->next)

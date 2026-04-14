@@ -2474,8 +2474,7 @@ cr_parser_parse_stylesheet (CRParser * a_this)
                                         }
                                 }
 
-                                g_list_free (media_list);
-                                media_list = NULL;
+                                g_clear_list (&media_list, NULL);
                         }
 
                         if (import_string) {
@@ -3665,8 +3664,7 @@ cr_parser_parse_import (CRParser * a_this,
                         }
                 }
 
-                g_list_free (*a_media_list);
-                *a_media_list = NULL;
+                g_clear_list (&*a_media_list, NULL);
         }
 
         if (*a_import_string) {
@@ -3818,8 +3816,7 @@ cr_parser_parse_media (CRParser * a_this)
                         cr_string_destroy (cur->data);
                 }
 
-                g_list_free (media_list);
-                media_list = NULL;
+                g_clear_list (&media_list, NULL);
         }
 
         cr_parser_clear_errors (a_this);
@@ -3846,8 +3843,7 @@ cr_parser_parse_media (CRParser * a_this)
                         cr_string_destroy (cur->data);
                 }
 
-                g_list_free (media_list);
-                media_list = NULL;
+                g_clear_list (&media_list, NULL);
         }
 
         cr_tknzr_set_cur_pos (PRIVATE (a_this)->tknzr, &init_pos);

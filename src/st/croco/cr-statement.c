@@ -513,8 +513,7 @@ cr_statement_clear (CRStatement * a_this)
                                 }
 
                         }
-                        g_list_free (a_this->kind.media_rule->media_list);
-                        a_this->kind.media_rule->media_list = NULL;
+                        g_clear_list (&a_this->kind.media_rule->media_list, NULL);
                 }
                 g_free (a_this->kind.media_rule);
                 a_this->kind.media_rule = NULL;
@@ -1403,8 +1402,7 @@ cr_statement_at_import_rule_parse_from_buf (const guchar * a_buf,
                                 media_list->data = NULL;
                         }
                 }
-                g_list_free (media_list);
-                media_list = NULL;
+                g_clear_list (&media_list, NULL);
         }
         if (import_string) {
                 cr_string_destroy (import_string);
