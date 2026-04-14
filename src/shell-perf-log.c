@@ -190,7 +190,7 @@ statistics_timeout (gpointer data)
 
   shell_perf_log_collect_statistics (perf_log);
 
-  return TRUE;
+  return G_SOURCE_CONTINUE;
 }
 
 /**

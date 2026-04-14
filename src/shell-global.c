@@ -1267,11 +1267,11 @@ run_leisure_functions (gpointer data)
 
   /* We started more work since we scheduled the idle */
   if (global->work_count > 0)
-    return FALSE;
+    return G_SOURCE_REMOVE;
 
   /* No leisure closures, so we are done */
   if (global->leisure_closures == NULL)
-    return FALSE;
+    return G_SOURCE_REMOVE;
 
   closures = global->leisure_closures;
   global->leisure_closures = NULL;
@@ -1289,7 +1289,7 @@ run_leisure_functions (gpointer data)
 
   g_slist_free (closures);
 
-  return FALSE;
+  return G_SOURCE_REMOVE;
 }
 
 static void
