@@ -3514,6 +3514,7 @@ st_icon_info_load_icon_async (StIconInfo          *icon_info,
   GError *error = NULL;
 
   task = g_task_new (icon_info, cancellable, callback, user_data);
+  g_task_set_source_tag (task, st_icon_info_load_icon_async);
 
   if (icon_info_get_pixbuf_ready (icon_info))
     {
@@ -4063,6 +4064,7 @@ st_icon_info_load_symbolic_async (StIconInfo          *icon_info,
   g_return_if_fail (colors != NULL);
 
   task = g_task_new (icon_info, cancellable, callback, user_data);
+  g_task_set_source_tag (task, st_icon_info_load_symbolic_async);
 
   data = g_new0 (AsyncSymbolicData, 1);
   g_task_set_task_data (task, data, (GDestroyNotify) async_symbolic_data_free);

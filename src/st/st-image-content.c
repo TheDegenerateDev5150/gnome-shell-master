@@ -316,6 +316,7 @@ st_image_load_async (GLoadableIcon       *icon,
   g_autoptr (GTask) task = NULL;
 
   task = g_task_new (icon, cancellable, callback, user_data);
+  g_task_set_source_tag (task, st_image_load_async);
   g_task_set_task_data (task, GINT_TO_POINTER (size), NULL);
   g_task_run_in_thread (task, load_image_thread);
 }

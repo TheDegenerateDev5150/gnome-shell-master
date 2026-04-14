@@ -450,6 +450,7 @@ grab_screenshot (ShellScreenshot     *screenshot,
   screenshot->screenshot_area.height = height;
 
   task = g_task_new (screenshot, NULL, on_screenshot_written, result);
+  g_task_set_source_tag (task, grab_screenshot);
   g_task_run_in_thread (task, write_screenshot_thread);
   g_object_unref (task);
 }
@@ -629,6 +630,7 @@ grab_window_screenshot (ShellScreenshot     *screenshot,
   g_signal_emit (screenshot, signals[SCREENSHOT_TAKEN], 0, &rect);
 
   task = g_task_new (screenshot, NULL, on_screenshot_written, result);
+  g_task_set_source_tag (task, grab_window_screenshot);
   g_task_run_in_thread (task, write_screenshot_thread);
   g_object_unref (task);
 }
@@ -877,6 +879,7 @@ shell_screenshot_screenshot_area (ShellScreenshot     *screenshot,
                   (MtkRectangle *) &screenshot->screenshot_area);
 
   task = g_task_new (screenshot, NULL, on_screenshot_written, result);
+  g_task_set_source_tag (task, shell_screenshot_screenshot_area);
   g_task_run_in_thread (task, write_screenshot_thread);
 }
 
