@@ -264,11 +264,7 @@ shell_app_cache_finalize (GObject *object)
 
   g_clear_object (&self->monitor);
 
-  if (self->queued_update)
-    {
-      g_source_remove (self->queued_update);
-      self->queued_update = 0;
-    }
+  g_clear_handle_id (&self->queued_update, g_source_remove);
 
   g_clear_pointer (&self->dir_monitors, g_ptr_array_unref);
   g_clear_pointer (&self->folders, g_hash_table_unref);
