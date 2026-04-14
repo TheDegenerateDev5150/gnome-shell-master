@@ -15,8 +15,12 @@ enum {
 
    PROP_PID,
    PROP_TITLE,
-   PROP_WM_CLASS
+   PROP_WM_CLASS,
+
+   N_PROPS
 };
+
+static GParamSpec *props[N_PROPS] = { NULL, };
 
 typedef struct _ShellTrayIconPrivate ShellTrayIconPrivate;
 
@@ -210,21 +214,19 @@ shell_tray_icon_class_init (ShellTrayIconClass *klass)
   actor_class->get_preferred_height = shell_tray_icon_get_preferred_height;
   actor_class->allocate = shell_tray_icon_allocate;
 
-  g_object_class_install_property (object_class,
-                                   PROP_PID,
-                                   g_param_spec_uint ("pid", NULL, NULL,
-                                                      0, G_MAXUINT, 0,
-                                                      G_PARAM_READABLE | G_PARAM_STATIC_STRINGS));
-  g_object_class_install_property (object_class,
-                                   PROP_TITLE,
-                                   g_param_spec_string ("title", NULL, NULL,
-                                                        NULL,
-                                                        G_PARAM_READABLE | G_PARAM_STATIC_STRINGS));
-  g_object_class_install_property (object_class,
-                                   PROP_WM_CLASS,
-                                   g_param_spec_string ("wm-class", NULL, NULL,
-                                                        NULL,
-                                                        G_PARAM_READABLE | G_PARAM_STATIC_STRINGS));
+  props[PROP_PID] = g_param_spec_uint ("pid", NULL, NULL,
+                                       0, G_MAXUINT, 0,
+                                       G_PARAM_READABLE | G_PARAM_STATIC_STRINGS);
+
+  props[PROP_TITLE] = g_param_spec_string ("title", NULL, NULL,
+                                           NULL,
+                                           G_PARAM_READABLE | G_PARAM_STATIC_STRINGS);
+
+  props[PROP_WM_CLASS] = g_param_spec_string ("wm-class", NULL, NULL,
+                                              NULL,
+                                              G_PARAM_READABLE | G_PARAM_STATIC_STRINGS);
+
+  g_object_class_install_properties (object_class, N_PROPS, props);
 }
 
 static void
