@@ -1130,8 +1130,7 @@ cr_statement_new_ruleset (CRStyleSheet * a_sheet,
 
         if (!result->kind.ruleset) {
                 cr_utils_trace_info ("Out of memory");
-                if (result)
-                        g_free (result);
+                g_free (result);
                 return NULL;
         }
 

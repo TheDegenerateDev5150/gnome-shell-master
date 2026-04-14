@@ -317,7 +317,5 @@ cr_simple_sel_destroy (CRSimpleSel * a_this)
                 cr_simple_sel_destroy (a_this->next);
         }
 
-        if (a_this) {
-                g_free (a_this);
-        }
+        g_free (a_this);
 }

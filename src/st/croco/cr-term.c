@@ -779,8 +779,6 @@ cr_term_destroy (CRTerm * a_this)
                 a_this->next = NULL;
         }
 
-        if (a_this) {
-                g_free (a_this);
-        }
+        g_free (a_this);
 
 }
