@@ -168,7 +168,7 @@ cr_attr_sel_to_string (CRAttrSel const * a_this)
         }
 
         if (str_buf) {
-                result = (guchar *) g_string_free (str_buf, FALSE);
+                result = (guchar *) g_string_free_and_steal (str_buf);
         }
 
         return result;

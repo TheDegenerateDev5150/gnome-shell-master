@@ -149,7 +149,7 @@ latin1_to_utf8 (const char *latin1)
       ++p;
     }
 
-  return g_string_free (str, FALSE);
+  return g_string_free_and_steal (str);
 }
 
 /* derived from libwnck/xutils.c, comes as LGPLv2+ */

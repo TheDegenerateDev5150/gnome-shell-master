@@ -2323,7 +2323,7 @@ st_describe_actor (ClutterActor *actor)
 
   g_string_append_c (desc, ']');
 
-  return g_string_free (desc, FALSE);
+  return g_string_free_and_steal (desc);
 }
 
 /**

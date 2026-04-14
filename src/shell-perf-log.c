@@ -782,7 +782,7 @@ escape_quotes (const char *input)
         g_string_append_c (result, *p);
     }
 
-  return g_string_free (result, FALSE);
+  return g_string_free_and_steal (result);
 }
 
 static gboolean
@@ -846,7 +846,7 @@ shell_perf_log_dump_events (ShellPerfLog   *perf_log,
 
   g_string_append (output, " ]");
 
-  return write_string (out, g_string_free (output, FALSE), error);
+  return write_string (out, g_string_free_and_steal (output), error);
 }
 
 typedef struct {
