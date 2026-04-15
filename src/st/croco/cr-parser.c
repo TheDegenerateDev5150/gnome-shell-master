@@ -501,10 +501,7 @@ cr_parser_error_destroy (CRParserError * a_this)
 {
         g_return_if_fail (a_this);
 
-        if (a_this->msg) {
-                g_free (a_this->msg);
-                a_this->msg = NULL;
-        }
+        g_clear_pointer (&a_this->msg, g_free);
 
         g_free (a_this);
 }
@@ -603,10 +600,7 @@ cr_parser_clear_errors (CRParser * a_this)
                 }
         }
 
-        if (PRIVATE (a_this)->err_stack) {
-                g_list_free (PRIVATE (a_this)->err_stack);
-                PRIVATE (a_this)->err_stack = NULL;
-        }
+        g_clear_pointer (&PRIVATE (a_this)->err_stack, g_list_free);
 
         return CR_OK;
 }
@@ -4524,8 +4518,5 @@ cr_parser_destroy (CRParser * a_this)
                 PRIVATE (a_this) = NULL;
         }
 
-        if (a_this) {
-                g_free (a_this);
-                a_this = NULL;  /*useless. Just for the sake of coherence */
-        }
+        g_clear_pointer (&a_this, g_free);
 }

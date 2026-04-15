@@ -548,10 +548,7 @@ cr_declaration_to_string (CRDeclaration const * a_this, gulong a_indent)
                 g_string_free (stringue, TRUE);
                 stringue = NULL;
         }
-        if (str) {
-                g_free (str);
-                str = NULL;
-        }
+        g_clear_pointer (&str, g_free);
 
         return result;
 }

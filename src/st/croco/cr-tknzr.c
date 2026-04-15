@@ -1610,10 +1610,7 @@ cr_tknzr_new (CRInput * a_input)
         if (result->priv == NULL) {
                 cr_utils_trace_info ("Out of memory");
 
-                if (result) {
-                        g_free (result);
-                        result = NULL;
-                }
+                g_clear_pointer (&result, g_free);
 
                 return NULL;
         }

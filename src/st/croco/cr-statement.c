@@ -625,10 +625,7 @@ cr_statement_ruleset_to_string (CRStatement const * a_this, glong a_indent)
         g_string_append (stringue, "}");
         result = g_string_free (stringue, FALSE);
 
-        if (tmp_str) {
-                g_free (tmp_str);
-                tmp_str = NULL;
-        }
+        g_clear_pointer (&tmp_str, g_free);
         return result;
 }
 
@@ -715,10 +712,7 @@ cr_statement_charset_to_string (CRStatement const *a_this,
                 cr_utils_dump_n_chars2 (' ', stringue, a_indent);
                 g_string_append_printf (stringue, 
                                         "@charset \"%s\" ;", str);
-                if (str) {
-                        g_free (str);
-                        str = NULL;
-                }
+                g_clear_pointer (&str, g_free);
         }
         if (stringue) {
                 str = g_string_free (stringue, FALSE);
@@ -2764,20 +2758,14 @@ cr_statement_destroy (CRStatement * a_this)
 
         /*walk backward and free next element */
         for (cur = cur->prev; cur && cur->prev; cur = cur->prev) {
-                if (cur->next) {
-                        g_free (cur->next);
-                        cur->next = NULL;
-                }
+                g_clear_pointer (&cur->next, g_free);
         }
 
         if (!cur)
                 return;
 
         /*free the one remaining list */
-        if (cur->next) {
-                g_free (cur->next);
-                cur->next = NULL;
-        }
+        g_clear_pointer (&cur->next, g_free);
 
         g_free (cur);
         cur = NULL;

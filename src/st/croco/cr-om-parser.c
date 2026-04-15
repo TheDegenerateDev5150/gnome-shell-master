@@ -727,10 +727,7 @@ property (CRDocHandler * a_this,
         return;
 
       error:
-        if (str) {
-                g_free (str);
-                str = NULL;
-        }
+        g_clear_pointer (&str, g_free);
 
         if (decl) {
                 cr_declaration_destroy (decl);
@@ -1135,8 +1132,5 @@ cr_om_parser_destroy (CROMParser * a_this)
                 PRIVATE (a_this) = NULL;
         }
 
-        if (a_this) {
-                g_free (a_this);
-                a_this = NULL;
-        }
+        g_clear_pointer (&a_this, g_free);
 }

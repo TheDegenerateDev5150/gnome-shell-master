@@ -251,10 +251,7 @@ cr_doc_handler_destroy (CRDocHandler * a_this)
 {
         g_return_if_fail (a_this);
 
-        if (a_this->priv) {
-                g_free (a_this->priv);
-                a_this->priv = NULL;
-        }
+        g_clear_pointer (&a_this->priv, g_free);
         g_free (a_this);
 }
 

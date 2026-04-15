@@ -273,19 +273,13 @@ cr_selector_destroy (CRSelector * a_this)
 
         /*walk backward the list and free each "next element" */
         for (cur = cur->prev; cur && cur->prev; cur = cur->prev) {
-                if (cur->next) {
-                        g_free (cur->next);
-                        cur->next = NULL;
-                }
+                g_clear_pointer (&cur->next, g_free);
         }
 
         if (!cur)
                 return;
 
-        if (cur->next) {
-                g_free (cur->next);
-                cur->next = NULL;
-        }
+        g_clear_pointer (&cur->next, g_free);
 
         g_free (cur);
 }
