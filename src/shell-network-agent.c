@@ -919,7 +919,7 @@ shell_network_agent_class_init (ShellNetworkAgentClass *klass)
   props[PROP_FORCE_ALWAYS_ASK] =
      g_param_spec_boolean ("force-always-ask", NULL, NULL,
                            FALSE,
-                           G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY);
+                           G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NAME);
 
   g_object_class_install_properties (gobject_class, N_PROPS, props);
 
