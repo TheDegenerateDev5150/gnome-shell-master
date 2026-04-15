@@ -12,6 +12,10 @@ class AppFavorites extends Signals.EventEmitter {
         this._parentalControlsManager.connect('app-filter-changed',
             () => this._updateFavorites());
 
+        this._appSystem = Shell.AppSystem.get_default();
+        this._appSystem.connect('installed-changed',
+            () => this._updateFavorites());
+
         this.FAVORITE_APPS_KEY = 'favorite-apps';
         this._favorites = {};
         global.settings.connect(`changed::${this.FAVORITE_APPS_KEY}`,
@@ -39,8 +43,7 @@ class AppFavorites extends Signals.EventEmitter {
 
     reload() {
         const ids = global.settings.get_strv(this.FAVORITE_APPS_KEY);
-        const appSys = Shell.AppSystem.get_default();
-        const apps = ids.map(id => appSys.lookup_app(id))
+        const apps = ids.map(id => this._appSystem.lookup_app(id))
                       .filter(app => app !== null && this._parentalControlsManager.shouldShowApp(app.app_info));
         this._favorites = {};
         for (let i = 0; i < apps.length; i++) {
