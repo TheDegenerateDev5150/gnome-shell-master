@@ -1273,8 +1273,7 @@ run_leisure_functions (gpointer data)
   if (global->leisure_closures == NULL)
     return G_SOURCE_REMOVE;
 
-  closures = global->leisure_closures;
-  global->leisure_closures = NULL;
+  closures = g_steal_pointer (&global->leisure_closures);
 
   for (iter = closures; iter; iter = iter->next)
     {

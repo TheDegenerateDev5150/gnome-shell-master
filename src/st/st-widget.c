@@ -524,11 +524,7 @@ st_widget_style_changed_internal (StWidget         *widget,
   StThemeNode *old_theme_node = NULL;
 
   priv->is_style_dirty = TRUE;
-  if (priv->theme_node)
-    {
-      old_theme_node = priv->theme_node;
-      priv->theme_node = NULL;
-    }
+  old_theme_node = g_steal_pointer (&priv->theme_node);
 
   /* update the style only if we are mapped */
   if (clutter_actor_is_mapped (CLUTTER_ACTOR (widget)))

@@ -402,8 +402,7 @@ app_notify_events_removed (App *app)
   GVariantBuilder builder;
   GSList *ids, *link;
 
-  ids = app->notify_ids;
-  app->notify_ids = NULL;
+  ids = g_steal_pointer (&app->notify_ids);
 
   print_debug ("Emitting EventsRemoved with %d ids", g_slist_length (ids));
 

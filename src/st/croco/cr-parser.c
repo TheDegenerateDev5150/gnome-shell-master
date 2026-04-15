@@ -1364,8 +1364,7 @@ cr_parser_parse_attribute_selector (CRParser * a_this,
         ENSURE_PARSING_COND (status == CR_OK
                              && token && token->type == IDENT_TK);
 
-        result->name = token->u.str;
-        token->u.str = NULL;
+        result->name = g_steal_pointer (&token->u.str);
         cr_token_destroy (token);
         token = NULL;
 
@@ -1401,11 +1400,9 @@ cr_parser_parse_attribute_selector (CRParser * a_this,
         ENSURE_PARSING_COND (status == CR_OK && token);
         
         if (token->type == IDENT_TK) {
-                result->value = token->u.str;
-                token->u.str = NULL;
+                result->value = g_steal_pointer (&token->u.str);
         } else if (token->type == STRING_TK) {
-                result->value = token->u.str;
-                token->u.str = NULL;
+                result->value = g_steal_pointer (&token->u.str);
         } else {
                 status = CR_PARSING_ERROR;
                 goto error;
@@ -1734,8 +1731,7 @@ cr_parser_parse_simple_selector (CRParser * a_this, CRSimpleSel ** a_sel)
                         add_sel = cr_additional_sel_new_with_type
                                 (ID_ADD_SELECTOR);
 
-                        add_sel->content.id_name = token->u.str;
-                        token->u.str = NULL;
+                        add_sel->content.id_name = g_steal_pointer (&token->u.str);
 
                         cr_parsing_location_copy 
                                 (&add_sel->location,
@@ -1760,8 +1756,7 @@ cr_parser_parse_simple_selector (CRParser * a_this, CRSimpleSel ** a_sel)
                                 add_sel = cr_additional_sel_new_with_type
                                         (CLASS_ADD_SELECTOR);
 
-                                add_sel->content.class_name = token->u.str;
-                                token->u.str = NULL;
+                                add_sel->content.class_name = g_steal_pointer (&token->u.str);
 
                                 add_sel_list =
                                         cr_additional_sel_append
@@ -1826,12 +1821,10 @@ cr_parser_parse_simple_selector (CRParser * a_this, CRSimpleSel ** a_sel)
 
                         if (token->type == IDENT_TK) {
                                 pseudo->type = IDENT_PSEUDO;
-                                pseudo->name = token->u.str;
-                                token->u.str = NULL;
+                                pseudo->name = g_steal_pointer (&token->u.str);
                                 found_sel = TRUE;
                         } else if (token->type == FUNCTION_TK) {
-                                pseudo->name = token->u.str;
-                                token->u.str = NULL;
+                                pseudo->name = g_steal_pointer (&token->u.str);
                                 cr_parser_try_to_skip_spaces_and_comments
                                         (a_this);
                                 status = cr_parser_parse_ident
@@ -1873,8 +1866,7 @@ cr_parser_parse_simple_selector (CRParser * a_this, CRSimpleSel ** a_sel)
         if (status == CR_OK && found_sel == TRUE) {
                 cr_parser_try_to_skip_spaces_and_comments (a_this);
 
-                sel->add_sel = add_sel_list;
-                add_sel_list = NULL;
+                sel->add_sel = g_steal_pointer (&add_sel_list);
                 
                 if (*a_sel == NULL) {
                         *a_sel = sel;
@@ -2151,8 +2143,7 @@ cr_parser_parse_function (CRParser * a_this,
                 goto error;
 
         if (token && token->type == FUNCTION_TK) {
-                *a_func_name = token->u.str;
-                token->u.str = NULL;
+                *a_func_name = g_steal_pointer (&token->u.str);
         } else {
                 status = CR_PARSING_ERROR;
                 goto error;
@@ -3223,8 +3214,7 @@ cr_parser_parse_declaration (CRParser * a_this,
                 cr_term_append_term (*a_expr, expr);
                 expr = NULL;
         } else {
-                *a_expr = expr;
-                expr = NULL;
+                *a_expr = g_steal_pointer (&expr);
         }
 
         cr_parser_clear_errors (a_this);
@@ -3730,8 +3720,7 @@ cr_parser_parse_media (CRParser * a_this)
         ENSURE_PARSING_COND (status == CR_OK
                              && token && token->type == IDENT_TK);
 
-        medium = token->u.str;
-        token->u.str = NULL;
+        medium = g_steal_pointer (&token->u.str);
         cr_token_destroy (token);
         token = NULL;
 
@@ -3898,8 +3887,7 @@ cr_parser_parse_page (CRParser * a_this)
         ENSURE_PARSING_COND (status == CR_OK && token);
 
         if (token->type == IDENT_TK) {
-                page_selector = token->u.str;
-                token->u.str = NULL;
+                page_selector = g_steal_pointer (&token->u.str);
                 cr_token_destroy (token);
                 token = NULL;
         } else {
@@ -4149,8 +4137,7 @@ cr_parser_parse_charset (CRParser * a_this, CRString ** a_value,
         status = cr_tknzr_get_next_token (PRIVATE (a_this)->tknzr, &token);
         ENSURE_PARSING_COND (status == CR_OK
                              && token && token->type == STRING_TK);
-        charset_str = token->u.str;
-        token->u.str = NULL;
+        charset_str = g_steal_pointer (&token->u.str);
         cr_token_destroy (token);
         token = NULL;
 
@@ -4163,10 +4150,7 @@ cr_parser_parse_charset (CRParser * a_this, CRString ** a_value,
         cr_token_destroy (token);
         token = NULL;
 
-        if (charset_str) {
-                *a_value = charset_str;
-                charset_str = NULL;
-        }
+        *a_value = g_steal_pointer (&charset_str);
 
         PRIVATE (a_this)->state = CHARSET_PARSED_STATE;
         return CR_OK;
