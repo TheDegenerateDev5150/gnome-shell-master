@@ -1114,7 +1114,7 @@ msgstr "%e. %B, %l∶%M %p"
 #: js/misc/dateUtils.js:208
 #, no-c-format
 msgid "%B %-d %Y, %l:%M %p"
-msgstr "%B %-d %Y, %l:%M %p"
+msgstr "%e. %B %Y, %l:%M %p"
 
 #: js/portalHelper/main.js:98
 msgid "Your connection seems to be secure"
