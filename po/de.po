@@ -1047,7 +1047,7 @@ msgstr[1] "vor %d Jahren"
 #. Translators: Time in 24h format
 #: js/misc/dateUtils.js:155
 msgid "%H:%M"
-msgstr "1"
+msgstr "%H∶%M"
 
 #. Translators: this is the word "Yesterday" followed by a
 #. time string in 24h format. i.e. "Yesterday, 14:30"
@@ -1069,7 +1069,7 @@ msgstr "%A %H∶%M"
 #: js/misc/dateUtils.js:173
 #, no-c-format
 msgid "%B %-d, %H:%M"
-msgstr "1%e. %B, %H∶%M"
+msgstr "%e. %B, %H∶%M"
 
 #. Translators: this is the month name, day number, year
 #. number followed by a time string in 24h format.
@@ -1106,7 +1106,7 @@ msgstr "%A %l∶%M %p"
 #: js/misc/dateUtils.js:202
 #, no-c-format
 msgid "%B %-d, %l:%M %p"
-msgstr "1%e. %B, %l∶%M %p"
+msgstr "%e. %B, %l∶%M %p"
 
 #. Translators: this is the month name, day number, year
 #. number followed by a time string in 12h format.
@@ -1114,7 +1114,7 @@ msgstr "1%e. %B, %l∶%M %p"
 #: js/misc/dateUtils.js:208
 #, no-c-format
 msgid "%B %-d %Y, %l:%M %p"
-msgstr "1%e. %B %Y, %l:%M %p"
+msgstr "%B %-d %Y, %l:%M %p"
 
 #: js/portalHelper/main.js:98
 msgid "Your connection seems to be secure"
