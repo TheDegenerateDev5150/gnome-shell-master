@@ -491,6 +491,8 @@ class EndSessionDialog extends ModalDialog.ModalDialog {
             } else {
                 await this._triggerOfflineUpdateCancel();
             }
+        } else if (this._type === DialogType.UPDATE_RESTART && (this._updatePrepared || this._updateScheduled)) {
+            await this._setPostUpdateAction(OFFLINE_UPDATE_ACTION_REBOOT);
         }
 
         this._fadeOutDialog();
