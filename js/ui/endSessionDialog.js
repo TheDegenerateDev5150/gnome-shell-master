@@ -713,7 +713,7 @@ class EndSessionDialog extends ModalDialog.ModalDialog {
             this._loadSessions().catch(logError);
 
         _setCheckBoxLabel(this._checkBox, dialogContent.checkBoxText || '');
-        this._checkBox.visible = dialogContent.checkBoxText && this._updatePrepared;
+        this._checkBox.visible = dialogContent.checkBoxText && (this._updatePrepared || this._updateScheduled);
 
         this._checkBox.checked = this._checkBox.visible && !this._isBatteryLow();
 
