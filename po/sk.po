@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
-"POT-Creation-Date: 2026-04-09 14:55+0000\n"
-"PO-Revision-Date: 2026-04-10 13:46+0200\n"
+"POT-Creation-Date: 2026-04-23 13:35+0000\n"
+"PO-Revision-Date: 2026-04-23 21:56+0200\n"
 "Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -103,7 +103,7 @@ msgid "Open new window of pinned app 9"
 msgstr "Otvoriť nové okno pripnutej aplikácie č. 9"
 
 #. Translators: name of the folder under ~/Pictures for screenshots.
-#: data/50-gnome-shell-screenshots.xml:6 js/ui/screenshot.js:2296
+#: data/50-gnome-shell-screenshots.xml:6 js/ui/screenshot.js:2334
 msgid "Screenshots"
 msgstr "Snímky obrazovky"
 
@@ -172,7 +172,7 @@ msgstr ""
 
 #: data/org.gnome.shell.gschema.xml.in:16
 msgid "UUIDs of extensions to enable"
-msgstr "Vlastnosť UUID rozšírení určených na povolenie"
+msgstr "Identifikátory UUID rozšírení na povolenie"
 
 #: data/org.gnome.shell.gschema.xml.in:17
 msgid ""
@@ -189,7 +189,7 @@ msgstr ""
 
 #: data/org.gnome.shell.gschema.xml.in:26
 msgid "UUIDs of extensions to force disabling"
-msgstr "Vlastnosť UUID rozšírení určených na nútené vypnutie"
+msgstr "Identifikátory UUID rozšírení na vypnutie"
 
 #: data/org.gnome.shell.gschema.xml.in:27
 msgid ""
@@ -544,12 +544,12 @@ msgid ""
 "If true, only applications that have windows on the current workspace are "
 "shown in the switcher. Otherwise, all applications are included."
 msgstr ""
-"Ak je true, iba aplikácie, ktoré majú okná na aktuálnom pracovnom priestore "
+"Ak je zapnuté, iba aplikácie, ktoré majú okná na aktuálnom pracovnom priestore "
 "budú zobrazené v prepínači. Inak budú zahrnuté všetky aplikácie."
 
 #: data/org.gnome.shell.gschema.xml.in:330
 msgid "The application icon mode."
-msgstr "Režim ikonizácie aplikácií."
+msgstr "Režim ikon aplikácií."
 
 #: data/org.gnome.shell.gschema.xml.in:331
 msgid ""
@@ -567,7 +567,7 @@ msgid ""
 "If true, only windows from the current workspace are shown in the switcher. "
 "Otherwise, all windows are included."
 msgstr ""
-"Ak je true, iba okná z aktuálneho pracovného priestoru budú zobrazené v "
+"Ak je zapnuté, iba okná z aktuálneho pracovného priestoru budú zobrazené v "
 "prepínači. Inak budú zahrnuté všetky okná."
 
 #: data/org.gnome.shell.gschema.xml.in:350
@@ -649,8 +649,8 @@ msgstr "Bol dosiahnutý limit času stráveného pred obrazovkou"
 msgid ""
 "Daily limit for screen time on this device has been reached. Resume tomorrow."
 msgstr ""
-"Denný limit času stráveného pred obrazovkou na tomto zariadení bol dosiahnutý. "
-"Pokračujte zajtra."
+"Denný limit času stráveného pred obrazovkou na tomto zariadení bol "
+"dosiahnutý. Pokračujte zajtra."
 
 #. Translators: this is for ignoring a screen time limit for parental controls
 #: js/gdm/authPrompt.js:72
@@ -912,13 +912,13 @@ msgid ""
 msgid_plural ""
 "Take a break from the screen. Look at least 6 meters away for at least %s"
 msgstr[0] ""
-"Odpočiňte si od používania obrazovky. Pozerajte sa zo vzdialenosti aspoň 6 "
+"Odpočiňte si od používania obrazovky. Pozerajte sa do vzdialenosti aspoň 6 "
 "metrov po dobu %s"
 msgstr[1] ""
-"Odpočiňte si od používania obrazovky. Pozerajte sa zo vzdialenosti aspoň 6 "
+"Odpočiňte si od používania obrazovky. Pozerajte sa do vzdialenosti aspoň 6 "
 "metrov po dobu %s"
 msgstr[2] ""
-"Odpočiňte si od používania obrazovky. Pozerajte sa zo vzdialenosti aspoň 6 "
+"Odpočiňte si od používania obrazovky. Pozerajte sa do vzdialenosti aspoň 6 "
 "metrov po dobu %s"
 
 #: js/misc/breakManager.js:1220
@@ -1283,21 +1283,21 @@ msgstr "Odmietnuť"
 msgid "Allow"
 msgstr "Povoliť"
 
-#: js/ui/appDisplay.js:1733
+#: js/ui/appDisplay.js:1734
 msgid "Unnamed Folder"
 msgstr "Nepomenovaný priečinok"
 
-#: js/ui/appFavorites.js:89
+#: js/ui/appFavorites.js:104
 #, javascript-format
 msgid "%s has been pinned to the dash."
 msgstr "Aplikácia %s bola pripnutá k doku."
 
-#: js/ui/appFavorites.js:120
+#: js/ui/appFavorites.js:135
 #, javascript-format
 msgid "%s has been unpinned from the dash."
-msgstr "Aplikácii %s bolo zrušené pripnutie k doku."
+msgstr "Aplikácia %s bola odopnutá z doku."
 
-#: js/ui/appFavorites.js:134 js/ui/main.js:304
+#: js/ui/appFavorites.js:149 js/ui/main.js:304
 msgid "Undo"
 msgstr "Vrátiť"
 
@@ -1318,7 +1318,7 @@ msgstr "Podrobnosti o aplikácii"
 msgid "Quit"
 msgstr "Ukončiť"
 
-#: js/ui/appMenu.js:160 js/ui/dash.js:245
+#: js/ui/appMenu.js:160 js/ui/dash.js:244
 msgid "Unpin"
 msgstr "Zrušiť pripnutie"
 
@@ -1514,17 +1514,17 @@ msgid "The installed udisks version does not support the PIM setting"
 msgstr "Nainštalovaná verzia programu udisks nepodporuje nastavenie PIM"
 
 #. Translators: %s is the name of a partition on a external drive
-#: js/ui/components/autorunManager.js:189
+#: js/ui/components/autorunManager.js:190
 #, javascript-format
 msgid "“%s” connected"
 msgstr "„%s“ pripojené"
 
-#: js/ui/components/autorunManager.js:190
+#: js/ui/components/autorunManager.js:191
 msgid "Disk can now be used"
 msgstr "Disk môžete teraz začať používať"
 
 # DK: doplnil som slovo "programu", aby to znelo prirodzenejsie. priklad:po pripojeni USB kluca bolo zobrazene "Otvoriť pomocou Súbory"
-#: js/ui/components/autorunManager.js:202
+#: js/ui/components/autorunManager.js:203
 #, javascript-format
 msgid "Open with %s"
 msgstr "Otvoriť pomocou aplikácie %s"
@@ -1629,13 +1629,13 @@ msgid "Windows"
 msgstr "Okná"
 
 # tooltip
-#: js/ui/dash.js:201 js/ui/dash.js:247
+#: js/ui/dash.js:200 js/ui/dash.js:246
 msgid "Show Apps"
 msgstr "Zobrazí aplikácie"
 
 #. Translators: this is the name of the dock/favorites area on
 #. the bottom of the overview
-#: js/ui/dash.js:405
+#: js/ui/dash.js:400
 msgid "Dash"
 msgstr "Dok"
 
@@ -1857,13 +1857,13 @@ msgid "Boot Options"
 msgstr "Voľby zavádzania"
 
 #. Translators: Remote here refers to a remote session, like a ssh login
-#: js/ui/endSessionDialog.js:635
+#: js/ui/endSessionDialog.js:637
 #, javascript-format
 msgid "%s (remote)"
 msgstr "%s (vzdialená relácia)"
 
 #. Translators: Console here refers to a tty like a VT console
-#: js/ui/endSessionDialog.js:638
+#: js/ui/endSessionDialog.js:640
 #, javascript-format
 msgid "%s (console)"
 msgstr "%s (konzola)"
@@ -1973,7 +1973,7 @@ msgstr "Vypnúť"
 msgid "Leave Off"
 msgstr "Ponechať vypnuté"
 
-#: js/ui/keyboard.js:179 js/ui/status/keyboard.js:896
+#: js/ui/keyboard.js:179 js/ui/status/keyboard.js:895
 msgid "Keyboard Settings"
 msgstr "Nastavenia klávesnice"
 
@@ -2017,11 +2017,11 @@ msgstr "Sťahuje sa"
 
 #: js/ui/lookingGlass.js:830
 msgid "Deactivating"
-msgstr "Deaktivujem"
+msgstr "Deaktivuje sa"
 
 #: js/ui/lookingGlass.js:832
 msgid "Activating"
-msgstr "Aktivujem"
+msgstr "Aktivuje sa"
 
 # PK: ide tu o zdrojovy kod?
 #: js/ui/lookingGlass.js:868
@@ -2179,119 +2179,119 @@ msgstr "Prostredie GNOME vyžaduje uzamknutie obrazovky"
 msgid "Screen Capture"
 msgstr "Zachytenie obrazovky"
 
-#: js/ui/screenshot.js:1267
+#: js/ui/screenshot.js:1305
 msgid "Selection"
 msgstr "Výber"
 
-#: js/ui/screenshot.js:1277
+#: js/ui/screenshot.js:1315
 msgid "Area Selection"
 msgstr "Výber oblasti"
 
-#: js/ui/screenshot.js:1282
+#: js/ui/screenshot.js:1320
 msgid "Screen"
 msgstr "Obrazovka"
 
-#: js/ui/screenshot.js:1292
+#: js/ui/screenshot.js:1330
 msgid "Screen Selection"
 msgstr "Výber obrazovky"
 
-#: js/ui/screenshot.js:1297
+#: js/ui/screenshot.js:1335
 msgid "Window"
 msgstr "Okno"
 
-#: js/ui/screenshot.js:1307
+#: js/ui/screenshot.js:1345
 msgid "Window Selection"
 msgstr "Výber okna"
 
-#: js/ui/screenshot.js:1332 js/ui/status/system.js:118
+#: js/ui/screenshot.js:1370 js/ui/status/system.js:118
 msgid "Take Screenshot"
 msgstr "Zachytiť snímku obrazovky"
 
-#: js/ui/screenshot.js:1348
+#: js/ui/screenshot.js:1386
 msgid "Record Screen"
 msgstr "Nahrať obrazovku"
 
 #. Translators: since this string refers to an action,
 #. it needs to be phrased as a verb.
-#: js/ui/screenshot.js:1365
+#: js/ui/screenshot.js:1403
 msgid "Capture"
 msgstr "Zachytenie"
 
 # tooltip
-#: js/ui/screenshot.js:1387
+#: js/ui/screenshot.js:1425
 msgid "Show Pointer"
 msgstr "Zobrazí ukazovateľ"
 
 #. Translators: this is the folder where recorded
 #. screencasts are stored.
-#: js/ui/screenshot.js:2020
+#: js/ui/screenshot.js:2058
 msgid "Screencasts"
 msgstr "Záznamy obrazovky"
 
 #. Translators: this is a filename used for screencast
 #. * recording, where "%d" and "%t" date and time, e.g.
 #. * "Screencast From 07-17-2013 10:00:46 PM"
-#: js/ui/screenshot.js:2025
+#: js/ui/screenshot.js:2063
 #, no-c-format
 msgid "Screencast From %d %t"
 msgstr "Záznam obrazovky z dňa %d %t"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2071
+#: js/ui/screenshot.js:2109
 msgid "Screencast recorded"
-msgstr "Záznam obrazovky zaznamenaný"
+msgstr "Obrazovka bola zaznamenaná"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2084
+#: js/ui/screenshot.js:2122
 msgid "Screencast failed to start"
 msgstr "Nepodarilo sa spustiť záznam obrazovky"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2090
+#: js/ui/screenshot.js:2128
 msgid "Screencast ended: Out of disk space"
 msgstr "Záznam obrazovky skončil: došlo miesto na disku"
 
 #. We can encourage user to try again on service crashes since the
 #. recorder will auto-blocklist the pipeline that crashed.
 #. Translators: notification title.
-#: js/ui/screenshot.js:2096
+#: js/ui/screenshot.js:2134
 msgid "Screencast ended unexpectedly, please try again"
-msgstr "Záznam obrazovky neočakávane skončil, skúste to prosím znovu"
+msgstr "Záznam obrazovky neočakávane skončil, skúste to, prosím, znovu"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2099
+#: js/ui/screenshot.js:2137
 msgid "Screencast ended unexpectedly"
 msgstr "Záznam obrazovky neočakávane skončil"
 
 #. Translators: notification body when a screencast was recorded.
-#: js/ui/screenshot.js:2112
+#: js/ui/screenshot.js:2150
 msgid "Click here to view the video"
 msgstr "Kliknutím sem zobrazíte video"
 
 #. Translators: button on the screencast notification.
 #. Translators: button on the screenshot notification.
-#: js/ui/screenshot.js:2120 js/ui/screenshot.js:2363
+#: js/ui/screenshot.js:2158 js/ui/screenshot.js:2401
 msgid "Show in Files"
 msgstr "Zobraziť v aplikácii Súbory"
 
 #. Translators: this is the name of the file that the screenshot is
 #. saved to. The placeholder is a timestamp, e.g. "2017-05-21 12-24-03".
-#: js/ui/screenshot.js:2309
+#: js/ui/screenshot.js:2347
 #, javascript-format
 msgid "Screenshot From %s"
 msgstr "Snímka obrazovky z dňa %s"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2353
+#: js/ui/screenshot.js:2391
 msgid "Screenshot captured"
 msgstr "Snímka obrazovky zachytená"
 
 #. Translators: notification body when a screenshot was captured.
-#: js/ui/screenshot.js:2355
+#: js/ui/screenshot.js:2393
 msgid "You can paste the image from the clipboard"
 msgstr "Môžete vložiť obrázok zo schránky"
 
-#: js/ui/screenshot.js:2413 js/ui/screenshot.js:2575
+#: js/ui/screenshot.js:2451 js/ui/screenshot.js:2613
 msgid "Screenshot taken"
 msgstr "Snímka obrazovky bola zachytená"
 
@@ -2479,7 +2479,7 @@ msgstr "Nízky"
 msgid "High"
 msgstr "Vysoký"
 
-#: js/ui/status/backlight.js:162 js/ui/status/keyboard.js:878
+#: js/ui/status/backlight.js:162 js/ui/status/keyboard.js:877
 msgid "Keyboard"
 msgstr "Klávesnica"
 
@@ -2565,7 +2565,7 @@ msgid "Dwell Click"
 msgstr "Kliknutie zotrvaním"
 
 # menu item
-#: js/ui/status/keyboard.js:895
+#: js/ui/status/keyboard.js:894
 msgid "Show Keyboard Layout"
 msgstr "Zobraziť rozloženie klávesnice"
 
@@ -3051,7 +3051,7 @@ msgctxt "program"
 msgid "Unknown"
 msgstr "Neznámy"
 
-#: src/shell-app.c:517
+#: src/shell-app.c:516
 #, c-format
 msgid "Failed to launch “%s”"
 msgstr "Zlyhalo spustenie „%s“"
@@ -3074,7 +3074,7 @@ msgstr "Dialógové okno overenia totožnosti bolo zatvorené používateľom"
 msgid "Icon '%s' not present in theme %s"
 msgstr "Ikona „%s“ nie je prítomná v motíve %s"
 
-#: src/st/st-icon-theme.c:3450 src/st/st-icon-theme.c:3753
+#: src/st/st-icon-theme.c:3450 src/st/st-icon-theme.c:3754
 msgid "Failed to load icon"
 msgstr "Zlyhalo načítanie ikony"
 
@@ -3095,15 +3095,15 @@ msgstr ""
 "Rozšírenia prostredia GNOME spravujú aktualizácie rozšírení, konfiguráciu "
 "predvolieb rozšírení a odstraňovanie alebo zakázanie nechcených rozšírení."
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:64
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:65
 msgid "Main Window"
 msgstr "Hlavné okno"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:68
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:69
 msgid "Available Updates"
 msgstr "Dostupné aktualizácie"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:72
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:73
 msgid "Search View"
 msgstr "Zobrazenie vyhľadávania"
 
@@ -3245,7 +3245,7 @@ msgid ""
 "disable all extensions if you experience problems with your system."
 msgstr ""
 "Rozšírenia môžu spôsobiť problémy s výkonom a stabilitou. Ak narazíte na "
-"problémy s vaším systémom, všetky rozšírenia vypnite."
+"problémy s vašim systémom, všetky rozšírenia vypnite."
 
 #: subprojects/extensions-app/data/ui/extensions-window.ui:175
 msgid "User Extensions"
@@ -3345,7 +3345,7 @@ msgid ""
 "Description is a single-sentence explanation of what your extension does.\n"
 "Examples are: %s"
 msgstr ""
-"Popis je jedna veta, popisujúca, čo robí Vaše rozšírenie\n"
+"Popis je jedna veta, popisujúca, čo robí vaše rozšírenie\n"
 "Príklady: %s"
 
 #: subprojects/extensions-tool/src/command-create.c:402
@@ -3360,8 +3360,8 @@ msgid ""
 "This should be in the format of an email address "
 "(clicktofocus@janedoe.example.com)\n"
 msgstr ""
-"UUID je globálne unikátny identifikátor pre Vaše rozšírenie.\n"
-"Má byť vo formáte emailovej adresy (clicktofocus.priklad.com)\n"
+"Identifikátor UUID je globálne jedinečný identifikátor pre vaše rozšírenie.\n"
+"Má byť vo formáte e-mailovej adresy (clicktofocus.priklad.com)\n"
 
 #: subprojects/extensions-tool/src/command-create.c:443
 #, c-format
@@ -3776,7 +3776,7 @@ msgstr "Zakázať rozšírenie"
 # summary
 #: subprojects/extensions-tool/src/main.c:339
 msgid "Reset extension"
-msgstr "Reštartovať rozšírenie"
+msgstr "Obnoviť rozšírenie"
 
 # summary
 #: subprojects/extensions-tool/src/main.c:340
@@ -3841,13 +3841,13 @@ msgstr "Pridať položku do rýchlych nastavení"
 
 #. translators:
 #. * The device has been disabled
-#: subprojects/gvc/gvc-mixer-control.c:1908
+#: subprojects/gvc/gvc-mixer-control.c:1872
 msgid "Disabled"
 msgstr "Zakázané"
 
 #. translators:
 #. * The number of sound outputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1915
+#: subprojects/gvc/gvc-mixer-control.c:1879
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
@@ -3857,7 +3857,7 @@ msgstr[2] "%u výstupy"
 
 #. translators:
 #. * The number of sound inputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1925
+#: subprojects/gvc/gvc-mixer-control.c:1889
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
@@ -3865,7 +3865,7 @@ msgstr[0] "%u vstupov"
 msgstr[1] "%u vstup"
 msgstr[2] "%u vstupy"
 
-#: subprojects/gvc/gvc-mixer-control.c:2876
+#: subprojects/gvc/gvc-mixer-control.c:2872
 msgid "System Sounds"
 msgstr "Systémové zvuky"
 
