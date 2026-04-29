@@ -10,3 +10,5 @@ subprojects/libshew
 .eslintcache
 .vscode
 node_modules
+__pycache__
+.wraplock
