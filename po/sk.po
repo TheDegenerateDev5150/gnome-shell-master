@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
-"POT-Creation-Date: 2026-04-26 13:06+0000\n"
-"PO-Revision-Date: 2026-04-23 21:56+0200\n"
+"POT-Creation-Date: 2026-04-27 21:22+0000\n"
+"PO-Revision-Date: 2026-04-29 18:54+0200\n"
 "Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -128,7 +128,7 @@ msgid "Record a screencast interactively"
 msgstr "Interaktívny záznam obrazovky"
 
 #: data/50-gnome-shell-system.xml:6
-#: data/X-GNOME-Shell-System.directory.desktop.in:2 js/ui/messageTray.js:1319
+#: data/X-GNOME-Shell-System.directory.desktop.in:2 js/ui/messageTray.js:1325
 msgid "System"
 msgstr "Systém"
 
@@ -355,7 +355,7 @@ msgstr ""
 "Rozloženie nástroja na výber aplikácie. Každý záznam v poli je stránkou. "
 "Stránky sú uložené v poradí, v akom sú viditeľné v Shelli prostredia GNOME. "
 "Každá stránka obsahuje pár záznamov „application id“ → „údaje“. Momentálne "
-"sú nasledovné hodnoty uložené ako „údaje“: • “„pozícia“: pozícia ikony "
+"sú nasledovné hodnoty uložené ako „údaje“: • „pozícia“: pozícia ikony "
 "aplikácie na stránke"
 
 #: data/org.gnome.shell.gschema.xml.in:145
@@ -2067,7 +2067,7 @@ msgstr "Uzamykanie obrazovky vyžaduje správcu displejov prostredia GNOME"
 msgid "Unknown App"
 msgstr "Neznáma aplikácia"
 
-#: js/ui/messageTray.js:325 js/ui/messageTray.js:327
+#: js/ui/messageTray.js:331 js/ui/messageTray.js:333
 msgid "Notification sound"
 msgstr "Zvuk oznámenia"
 
