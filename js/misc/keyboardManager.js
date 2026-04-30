@@ -130,7 +130,7 @@ class KeyboardManager extends Signals.EventEmitter {
         if (!this._current)
             return;
 
-        this._doApply(this._current).catch(logError);
+        this._doApply(this._current.id).catch(logError);
     }
 
     setUserLayouts(ids) {
