@@ -262,11 +262,6 @@ export class ShellUserVerifier extends Signals.EventEmitter {
         this.emit('no-more-messages');
     }
 
-    increaseCurrentMessageTimeout(interval) {
-        if (!this._messageQueueTimeoutId && interval > 0)
-            this._currentMessageExtraInterval = interval;
-    }
-
     _serviceHasPendingMessages(serviceName) {
         return this._messageQueue.some(m => m.serviceName === serviceName);
     }
@@ -279,17 +274,23 @@ export class ShellUserVerifier extends Signals.EventEmitter {
             this._queuePriorityMessage(serviceName, null, messageType);
     }
 
-    _queueMessageTimeout() {
-        if (this._messageQueueTimeoutId !== 0)
+    async _queueMessageTimeout() {
+        if (this._messageQueueTimeoutId !== 0 || this._showMessageResolver)
             return;
 
         const message = this.currentMessage;
+        const {promise, resolve} = Promise.withResolvers();
+        this._showMessageResolver = resolve;
 
-        delete this._currentMessageExtraInterval;
-        this.emit('show-message', message.serviceName, message.text, message.type);
+        this.emit('show-message', message.serviceName, message.text, message.type, this._showMessageResolver);
+
+        await promise.catch(logError);
+        if (!this._showMessageResolver)
+            return;
+        this._showMessageResolver = null;
 
         this._messageQueueTimeoutId = GLib.timeout_add_once(GLib.PRIORITY_DEFAULT,
-            message.interval + (this._currentMessageExtraInterval | 0), () => {
+            message.interval, () => {
                 this._messageQueueTimeoutId = 0;
 
                 if (this._messageQueue.length > 1) {
@@ -330,6 +331,12 @@ export class ShellUserVerifier extends Signals.EventEmitter {
             GLib.source_remove(this._messageQueueTimeoutId);
             this._messageQueueTimeoutId = 0;
         }
+
+        if (this._showMessageResolver) {
+            this._showMessageResolver();
+            this._showMessageResolver = null;
+        }
+
         this.emit('show-message', null, null, MessageType.NONE);
     }
 
