@@ -85,7 +85,7 @@ export function ensureActorVisibleInScrollView(scrollView, actor) {
  * @param {number} params.wiggleCount - the number of times to wiggle the actor
  */
 export async function wiggle(actor, params) {
-    if (!St.Settings.get().enable_animations)
+    if (!St.Settings.get().enable_animations || params?.duration === 0)
         return;
 
     params = Params.parse(params, {
