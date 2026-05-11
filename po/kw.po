@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-shell/issues/\n"
-"POT-Creation-Date: 2026-03-20 01:51+0000\n"
-"PO-Revision-Date: 2026-03-23 13:17+0000\n"
+"POT-Creation-Date: 2026-04-27 21:22+0000\n"
+"PO-Revision-Date: 2026-05-11 21:57+0100\n"
 "Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
 "Language-Team: kw\n"
 "Language: kw\n"
@@ -102,7 +102,7 @@ msgid "Open new window of pinned app 9"
 msgstr "Ygeri fenester nowydh a app pynnys 9"
 
 #. Translators: name of the folder under ~/Pictures for screenshots.
-#: data/50-gnome-shell-screenshots.xml:6 js/ui/screenshot.js:2296
+#: data/50-gnome-shell-screenshots.xml:6 js/ui/screenshot.js:2334
 msgid "Screenshots"
 msgstr "Skrin-imajys"
 
@@ -127,7 +127,7 @@ msgid "Record a screencast interactively"
 msgstr "Rekordya unn skrin-gwydhyow yn kesvewek"
 
 #: data/50-gnome-shell-system.xml:6
-#: data/X-GNOME-Shell-System.directory.desktop.in:2 js/ui/messageTray.js:1319
+#: data/X-GNOME-Shell-System.directory.desktop.in:2 js/ui/messageTray.js:1325
 msgid "System"
 msgstr "System"
 
@@ -1184,11 +1184,11 @@ msgstr "%B %-d, %l:%M %p"
 msgid "%B %-d %Y, %l:%M %p"
 msgstr "%B %-d %Y, %l:%M %p"
 
-#: js/portalHelper/main.js:98
+#: js/portalHelper/main.js:104
 msgid "Your connection seems to be secure"
 msgstr "Dha junyans heveli saw"
 
-#: js/portalHelper/main.js:104
+#: js/portalHelper/main.js:110
 msgid ""
 "Your connection to this hotspot login is not secure. Passwords or other "
 "information you enter on this page can be viewed by people nearby."
@@ -1196,7 +1196,7 @@ msgstr ""
 "Dha junyasn dhe an omgelmyans hotspot ma na saw. Ger-tremena po kudhlow aral "
 "ty ynworra war an folen ma gallos bo gwelys gans tus yn ogas."
 
-#: js/portalHelper/main.js:115
+#: js/portalHelper/main.js:121
 msgid "Hotspot Login"
 msgstr "Omgelmyans Hotspot"
 
@@ -1210,21 +1210,21 @@ msgstr "Nagha"
 msgid "Allow"
 msgstr "Gasa"
 
-#: js/ui/appDisplay.js:1733
+#: js/ui/appDisplay.js:1734
 msgid "Unnamed Folder"
 msgstr "Restrenva Dihenwys"
 
-#: js/ui/appFavorites.js:89
+#: js/ui/appFavorites.js:104
 #, javascript-format
 msgid "%s has been pinned to the dash."
 msgstr "%s yw pynnys war an skostel."
 
-#: js/ui/appFavorites.js:120
+#: js/ui/appFavorites.js:135
 #, javascript-format
 msgid "%s has been unpinned from the dash."
 msgstr "%s yw dispynnys war an skostel."
 
-#: js/ui/appFavorites.js:134 js/ui/main.js:304
+#: js/ui/appFavorites.js:149 js/ui/main.js:304
 msgid "Undo"
 msgstr "Digelmi"
 
@@ -1245,7 +1245,7 @@ msgstr "Manylyon App"
 msgid "Quit"
 msgstr "Kwytya"
 
-#: js/ui/appMenu.js:160 js/ui/dash.js:245
+#: js/ui/appMenu.js:160 js/ui/dash.js:244
 msgid "Unpin"
 msgstr "Dispynna"
 
@@ -1437,16 +1437,16 @@ msgid "The installed udisks version does not support the PIM setting"
 msgstr "An versyon leys udisks na skoodhya an settyans PIM"
 
 #. Translators: %s is the name of a partition on a external drive
-#: js/ui/components/autorunManager.js:189
+#: js/ui/components/autorunManager.js:190
 #, javascript-format
 msgid "“%s” connected"
 msgstr "“%s” junys"
 
-#: js/ui/components/autorunManager.js:190
+#: js/ui/components/autorunManager.js:191
 msgid "Disk can now be used"
 msgstr "Plasen gallos bos devnydhys lemmyn"
 
-#: js/ui/components/autorunManager.js:202
+#: js/ui/components/autorunManager.js:203
 #, javascript-format
 msgid "Open with %s"
 msgstr "Ygeri gans %s"
@@ -1550,13 +1550,13 @@ msgstr "Drog yw genev, na na oberi. Mar pleg assaya arta."
 msgid "Windows"
 msgstr "Fenestri"
 
-#: js/ui/dash.js:201 js/ui/dash.js:247
+#: js/ui/dash.js:200 js/ui/dash.js:246
 msgid "Show Apps"
 msgstr "Diskwedhes Appys"
 
 #. Translators: this is the name of the dock/favorites area on
 #. the bottom of the overview
-#: js/ui/dash.js:405
+#: js/ui/dash.js:400
 msgid "Dash"
 msgstr "Skostel"
 
@@ -1771,13 +1771,13 @@ msgid "Boot Options"
 msgstr "Dewisyow Dalleth"
 
 #. Translators: Remote here refers to a remote session, like a ssh login
-#: js/ui/endSessionDialog.js:635
+#: js/ui/endSessionDialog.js:637
 #, javascript-format
 msgid "%s (remote)"
 msgstr "%s (pell)"
 
 #. Translators: Console here refers to a tty like a VT console
-#: js/ui/endSessionDialog.js:638
+#: js/ui/endSessionDialog.js:640
 #, javascript-format
 msgid "%s (console)"
 msgstr "%s (konsolen)"
@@ -1881,7 +1881,7 @@ msgstr "Marowhe"
 msgid "Leave Off"
 msgstr "Gwitha Marow"
 
-#: js/ui/keyboard.js:179 js/ui/status/keyboard.js:896
+#: js/ui/keyboard.js:179 js/ui/status/keyboard.js:895
 msgid "Keyboard Settings"
 msgstr "Settyansow Bysowek"
 
@@ -1973,7 +1973,7 @@ msgstr "Owth Alhwedha Skrin rekwirya an dyghtyer displetyans GNOME"
 msgid "Unknown App"
 msgstr "App Ankoth"
 
-#: js/ui/messageTray.js:325 js/ui/messageTray.js:327
+#: js/ui/messageTray.js:331 js/ui/messageTray.js:333
 msgid "Notification sound"
 msgstr "Sownd gwarnyans"
 
@@ -2083,118 +2083,118 @@ msgstr "GNOME res alhwedha an skrin"
 msgid "Screen Capture"
 msgstr "Rekord Skrin"
 
-#: js/ui/screenshot.js:1267
+#: js/ui/screenshot.js:1305
 msgid "Selection"
 msgstr "Dewis"
 
-#: js/ui/screenshot.js:1277
+#: js/ui/screenshot.js:1315
 msgid "Area Selection"
 msgstr "Dewis Arenebedh"
 
-#: js/ui/screenshot.js:1282
+#: js/ui/screenshot.js:1320
 msgid "Screen"
 msgstr "Skrin"
 
-#: js/ui/screenshot.js:1292
+#: js/ui/screenshot.js:1330
 msgid "Screen Selection"
 msgstr "Dewis Skrin"
 
-#: js/ui/screenshot.js:1297
+#: js/ui/screenshot.js:1335
 msgid "Window"
 msgstr "Fenester"
 
-#: js/ui/screenshot.js:1307
+#: js/ui/screenshot.js:1345
 msgid "Window Selection"
 msgstr "Dewis Fenester"
 
-#: js/ui/screenshot.js:1332 js/ui/status/system.js:118
+#: js/ui/screenshot.js:1370 js/ui/status/system.js:118
 msgid "Take Screenshot"
 msgstr "Kemeres Skrin-Imach"
 
-#: js/ui/screenshot.js:1348
+#: js/ui/screenshot.js:1386
 msgid "Record Screen"
 msgstr "Rekordya Skrin"
 
 #. Translators: since this string refers to an action,
 #. it needs to be phrased as a verb.
-#: js/ui/screenshot.js:1365
+#: js/ui/screenshot.js:1403
 msgid "Capture"
 msgstr "Rekordya"
 
-#: js/ui/screenshot.js:1387
+#: js/ui/screenshot.js:1425
 msgid "Show Pointer"
 msgstr "Diskwedhes Resell"
 
 #. Translators: this is the folder where recorded
 #. screencasts are stored.
-#: js/ui/screenshot.js:2020
+#: js/ui/screenshot.js:2058
 msgid "Screencasts"
 msgstr "Skrin-Gwydhyowyow"
 
 #. Translators: this is a filename used for screencast
 #. * recording, where "%d" and "%t" date and time, e.g.
 #. * "Screencast From 07-17-2013 10:00:46 PM"
-#: js/ui/screenshot.js:2025
+#: js/ui/screenshot.js:2063
 #, no-c-format
 msgid "Screencast From %d %t"
 msgstr "Skrin-Gwydhyowyow A-Dhia %d %t"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2071
+#: js/ui/screenshot.js:2109
 msgid "Screencast recorded"
 msgstr "Skrin-Gwydhyow rekordys"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2084
+#: js/ui/screenshot.js:2122
 msgid "Screencast failed to start"
 msgstr "Skrin-Gwydhyow fyllis dalleth"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2090
+#: js/ui/screenshot.js:2128
 msgid "Screencast ended: Out of disk space"
 msgstr "Skrin-Gwydhyow diwedhys: Ow Difygya efander plasen"
 
 #. We can encourage user to try again on service crashes since the
 #. recorder will auto-blocklist the pipeline that crashed.
 #. Translators: notification title.
-#: js/ui/screenshot.js:2096
+#: js/ui/screenshot.js:2134
 msgid "Screencast ended unexpectedly, please try again"
 msgstr "Skrin-Gwydhyow diwedhys heb y waytyas, mar pleg assaya arta"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2099
+#: js/ui/screenshot.js:2137
 msgid "Screencast ended unexpectedly"
 msgstr "Skrin-Gwydhyow diwedhys heb y waytyas"
 
 #. Translators: notification body when a screencast was recorded.
-#: js/ui/screenshot.js:2112
+#: js/ui/screenshot.js:2150
 msgid "Click here to view the video"
 msgstr "Klyckya omma rag gweles an gywdhyow"
 
 #. Translators: button on the screencast notification.
 #. Translators: button on the screenshot notification.
-#: js/ui/screenshot.js:2120 js/ui/screenshot.js:2363
+#: js/ui/screenshot.js:2158 js/ui/screenshot.js:2401
 msgid "Show in Files"
 msgstr "Diskwedhes yn Restrennow"
 
 #. Translators: this is the name of the file that the screenshot is
 #. saved to. The placeholder is a timestamp, e.g. "2017-05-21 12-24-03".
-#: js/ui/screenshot.js:2309
+#: js/ui/screenshot.js:2347
 #, javascript-format
 msgid "Screenshot From %s"
 msgstr "Skrin-Imach A-Dhia %s"
 
 #. Translators: notification title.
-#: js/ui/screenshot.js:2353
+#: js/ui/screenshot.js:2391
 msgid "Screenshot captured"
 msgstr "Skrin-Imach kemerys"
 
 #. Translators: notification body when a screenshot was captured.
-#: js/ui/screenshot.js:2355
+#: js/ui/screenshot.js:2393
 msgid "You can paste the image from the clipboard"
 msgstr "Ty gallos dasskrifa an imach dhyworth an astel glypp"
 
-#: js/ui/screenshot.js:2413 js/ui/screenshot.js:2575
+#: js/ui/screenshot.js:2451 js/ui/screenshot.js:2613
 msgid "Screenshot taken"
 msgstr "Skrin-Imach kemerys"
 
@@ -2359,7 +2359,7 @@ msgstr "Appys yn Kilva Vyth"
 msgid "%d Background App"
 msgid_plural "%d Background Apps"
 msgstr[0] "%d App yn Kilva"
-msgstr[1] "%d Appy yn Kilva"
+msgstr[1] "%d Appys yn Kilva"
 
 #: js/ui/status/backlight.js:39
 msgid "Keyboard Brightness"
@@ -2377,7 +2377,7 @@ msgstr "Isel"
 msgid "High"
 msgstr "Ughel"
 
-#: js/ui/status/backlight.js:162 js/ui/status/keyboard.js:878
+#: js/ui/status/backlight.js:162 js/ui/status/keyboard.js:877
 msgid "Keyboard"
 msgstr "Bysowek"
 
@@ -2461,7 +2461,7 @@ msgstr "Klyck Nessa"
 msgid "Dwell Click"
 msgstr "Klyck Triga"
 
-#: js/ui/status/keyboard.js:895
+#: js/ui/status/keyboard.js:894
 msgid "Show Keyboard Layout"
 msgstr "Diskwedhes Aray Bysowek"
 
@@ -2936,12 +2936,12 @@ msgstr "Rolya fordhow galladow"
 msgid "Force animations to be enabled"
 msgstr "Ynia bywheansow dhe bos gallosegys"
 
-#: src/shell-app.c:267
+#: src/shell-app.c:266
 msgctxt "program"
 msgid "Unknown"
 msgstr "Ankoth"
 
-#: src/shell-app.c:518
+#: src/shell-app.c:516
 #, c-format
 msgid "Failed to launch “%s”"
 msgstr "Fyllis lonchya “%s”"
@@ -2963,7 +2963,7 @@ msgstr "Fenester omgelmyans yw degys gans an usyer"
 msgid "Icon '%s' not present in theme %s"
 msgstr "Arwodhik '%s' na ena yn thema %s"
 
-#: src/st/st-icon-theme.c:3450 src/st/st-icon-theme.c:3753
+#: src/st/st-icon-theme.c:3450 src/st/st-icon-theme.c:3754
 msgid "Failed to load icon"
 msgstr "Fyllis karga arwodhik"
 
@@ -2984,15 +2984,15 @@ msgstr ""
 "Ystynansow GNOME handla ow nowdhi ystynansow, ow selya settyansow ystynansow "
 "hag ow remova po owth ungallosegi ystynansow dihwansys."
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:64
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:65
 msgid "Main Window"
 msgstr "Fenester Chif"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:68
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:69
 msgid "Available Updates"
 msgstr "Nowedhyansow Kavadow"
 
-#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:72
+#: subprojects/extensions-app/data/metainfo/org.gnome.Extensions.metainfo.xml.in:73
 msgid "Search View"
 msgstr "Gwel Hwithrans"
 
